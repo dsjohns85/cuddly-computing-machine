@@ -1,16 +1,124 @@
-.home-page h1 {
-  color: #2c5530;
+/* Home Page Styles */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.home-page .hero {
+  position: relative;
+  padding: 4rem 2rem;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add your background image like this:
+  background-image: url('/path/to/hero-image.jpg');
+  */
+}
+
+.home-page .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home-page .hero h1,
+.home-page .hero .intro {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.home-page .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.home-page p {
-  font-size: 1.1rem;
+.home-page .hero .intro {
+  font-size: 1.2rem;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 1rem;
-  color: #555;
+  max-width: 800px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.home-page .symposium-highlight {
+  position: relative;
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  /* Add your background image like this:
+  background-image: url('/path/to/symposium-image.jpg');
+  */
+}
+
+.home-page .symposium-highlight h2 {
+  color: #2c5530;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-page .symposium-highlight p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-page .symposium-highlight .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #2c5530;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.home-page .symposium-highlight .btn:hover {
+  background-color: #1a3320;
+}
+
+@media (max-width: 768px) {
+  .home-page .hero {
+    padding: 3rem 1rem;
+    min-height: 300px;
+  }
+  
+  .home-page .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .home-page .hero .intro {
+    font-size: 1rem;
+  }
+  
+  .home-page .symposium-highlight {
+    padding: 2rem 1rem;
+  }
+  
+  .home-page .symposium-highlight h2 {
+    font-size: 1.6rem;
+  }
 }
 
 .about-page h1,
