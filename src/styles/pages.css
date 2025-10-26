@@ -7,20 +7,18 @@
 
 .home-page .hero {
   position: relative;
-  padding: 4rem 2rem;
-  min-height: 400px;
+  padding: 6rem 2rem;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: var(--color-background-dark);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
-  /* Add your background image like this:
-  background-image: url('/path/to/hero-image.jpg');
-  */
+  text-align: center;
 }
 
 .home-page .hero::before {
@@ -30,73 +28,96 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
 .home-page .hero h1,
-.home-page .hero .intro {
+.home-page .hero .intro,
+.home-page .hero h6,
+.home-page .hero .logo {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .home-page .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.home-page .hero h6 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  color: var(--color-text-light);
+}
+
+.home-page .hero .logo {
+  width: 150px;
+  height: 150px;
+  margin: 2rem 0;
+  object-fit: contain;
 }
 
 .home-page .hero .intro {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 700px;
   line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 300;
 }
 
 .home-page .symposium-highlight {
   position: relative;
-  padding: 3rem 2rem;
-  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  background-color: var(--color-background-light);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  /* Add your background image like this:
-  background-image: url('/path/to/symposium-image.jpg');
-  */
 }
 
 .home-page .symposium-highlight h2 {
-  color: #2c5530;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .home-page .symposium-highlight p {
   font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  color: #333;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--color-text-dark);
   line-height: 1.6;
 }
 
 .home-page .symposium-highlight .btn {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  background-color: #2c5530;
-  color: #fff;
+  padding: 0.75rem 2.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .home-page .symposium-highlight .btn:hover {
-  background-color: #1a3320;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -104,59 +125,78 @@
     padding: 2.2rem 0.5rem;
     min-height: 220px;
   }
-
+  
   .home-page .hero h1 {
     font-size: 1.5rem;
   }
-
+  
+  .home-page .hero h6 {
+    font-size: 0.9rem;
+  }
+  
+  .home-page .hero .logo {
+    width: 100px;
+    height: 100px;
+    margin: 1rem 0;
+  }
+  
   .home-page .hero .intro {
     font-size: 0.98rem;
   }
-
+  
   .home-page .symposium-highlight {
     padding: 1.2rem 0.5rem;
   }
-
+  
   .home-page .symposium-highlight h2 {
     font-size: 1.2rem;
   }
+}
 
-  @media (max-width: 480px) {
-    .home-page .hero {
-      padding: 1.2rem 0.2rem;
-      min-height: 140px;
-    }
-
-    .home-page .hero h1 {
-      font-size: 1.1rem;
-    }
-
-    .home-page .hero .intro {
-      font-size: 0.92rem;
-    }
-
-    .home-page .symposium-highlight {
-      padding: 0.7rem 0.2rem;
-    }
-
-    .home-page .symposium-highlight h2 {
-      font-size: 1rem;
-    }
+@media (max-width: 480px) {
+  .home-page .hero {
+    padding: 1.2rem 0.2rem;
+    min-height: 140px;
   }
+  
+  .home-page .hero h1 {
+    font-size: 1.1rem;
+  }
+  
+  .home-page .hero h6 {
+    font-size: 0.75rem;
+  }
+  
+  .home-page .hero .logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .home-page .hero .intro {
+    font-size: 0.92rem;
+  }
+  
+  .home-page .symposium-highlight {
+    padding: 0.7rem 0.2rem;
+  }
+  
+  .home-page .symposium-highlight h2 {
+    font-size: 1rem;
+  }
+}
 
-  @media (max-width: 375px) {
-    .home-page .hero {
-      padding: 0.7rem 0.1rem;
-      min-height: 90px;
-    }
-
-    .home-page .hero h1 {
-      font-size: 0.9rem;
-    }
-
-    .home-page .hero .intro {
-      font-size: 0.85rem;
-    }
+@media (max-width: 375px) {
+  .home-page .hero {
+    padding: 0.7rem 0.1rem;
+    min-height: 90px;
+  }
+  
+  .home-page .hero h1 {
+    font-size: 0.9rem;
+  }
+  
+  .home-page .hero .intro {
+    font-size: 0.85rem;
   }
 }
 
@@ -165,21 +205,21 @@
 .symposium-page h1,
 .registration-page h1,
 .resources-page h1 {
-  color: #2c5530;
-  font-size: 2.2rem;
+  color: var(--color-text-dark);
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #2c5530;
+  border-bottom: 3px solid var(--color-primary);
   padding-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 /* Resources Page Styles */
 .resources-page {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  background: #fafafa;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(44, 85, 48, 0.05);
+  padding: 3rem 2rem;
+  background: #fff;
+  border-radius: 0;
 }
 
 .resources-list {
@@ -190,13 +230,18 @@
 
 .resource-item {
   margin-bottom: 1.2rem;
-  padding: 1rem;
-  background: #f5f5f5;
-  border-radius: 6px;
+  padding: 1.2rem;
+  background: var(--color-background-light);
+  border-radius: 0;
   display: flex;
   align-items: center;
-  transition: box-shadow 0.2s;
-  box-shadow: 0 1px 4px rgba(44, 85, 48, 0.04);
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.resource-item:hover {
+  border-left-color: var(--color-primary);
+  transform: translateX(5px);
 }
 
 .resource-link {
@@ -204,50 +249,51 @@
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  color: #2c5530;
+  color: var(--color-text-dark);
   font-weight: 600;
   width: 100%;
 }
 
 .resource-link:hover {
-  color: #1a3320;
-  text-decoration: underline;
+  color: var(--color-primary-dark);
+  text-decoration: none;
 }
 
 .resource-name {
   flex: 1;
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
 .resource-type {
   margin-left: 1rem;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   color: #555;
   background: #e9ecef;
   border-radius: 4px;
-  padding: 0.2rem 0.7rem;
+  padding: 0.3rem 0.8rem;
+  font-weight: 400;
 }
 
 .resources-note {
   margin-top: 2rem;
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: #666;
-  background: #f8f9fa;
-  border-left: 4px solid #2c5530;
-  padding: 1rem;
-  border-radius: 6px;
+  background: var(--color-background-light);
+  border-left: 4px solid var(--color-primary);
+  padding: 1.2rem;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
   .resources-page {
     padding: 1rem 0.5rem;
   }
-
+  
   .resource-item {
     padding: 0.7rem;
     font-size: 0.98rem;
   }
-
+  
   .resource-type {
     margin-left: 0.5rem;
     font-size: 0.92rem;
@@ -257,187 +303,84 @@
 
 .about-page h2,
 .symposium-page h2 {
-  color: #1a3320;
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.about-page ul,
-.symposium-page ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-
-.about-page p,
-.symposium-page p,
-.registration-page p,
-.resources-page p {
-  font-size: 1rem;
-  line-height: 1.6;
+  color: var(--color-text-dark);
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: #555;
+  font-weight: 700;
 }
 
-/* Registration Page Styles */
-.registration-page .registration-intro {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  border-left: 4px solid #2c5530;
-}
-
-.registration-page .registration-intro p {
-  margin-bottom: 1rem;
-}
-
-.registration-page .registration-intro p:last-child {
-  margin-bottom: 0;
-}
-
-.registration-page .registration-details {
-  margin-bottom: 2rem;
-}
-
-.registration-page .event-details {
-  background-color: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.registration-page .detail-item {
-  margin-bottom: 0.75rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.registration-page .detail-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-
-.registration-page .registration-instructions {
-  margin-bottom: 2rem;
-}
-
-.registration-page .registration-instructions ul {
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-  color: #555;
-}
-
-.registration-page .registration-instructions li {
-  margin-bottom: 0.5rem;
-}
-
-.registration-page .application-form {
-  margin-bottom: 2rem;
-}
-
-.registration-page .form-placeholder {
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  padding: 2rem;
-  text-align: center;
-  background-color: #fafafa;
-}
-
-.registration-page .form-notice h3 {
-  color: #2c5530;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-
-.registration-page .form-notice p {
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.registration-page .placeholder-form {
+/* Contact Form Styles */
+.contact-section {
   max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--color-background-light);
+  border-radius: 0;
 }
 
-.registration-page .form-field {
+.contact-section h2 {
+  font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+  text-align: center;
+  font-weight: 700;
 }
 
-.registration-page .form-field label {
-  display: block;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
 }
 
-.registration-page .input-placeholder {
-  height: 40px;
-  background-color: #e9ecef;
-  border-radius: 4px;
-  border: 1px solid #ced4da;
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.registration-page .textarea-placeholder {
-  height: 100px;
-  background-color: #e9ecef;
-  border-radius: 4px;
-  border: 1px solid #ced4da;
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
 }
 
-.registration-page .submit-placeholder {
-  text-align: center;
-  margin-top: 2rem;
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-.registration-page .btn-placeholder {
-  background-color: #6c757d;
-  color: #fff;
+.submit-btn {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
   padding: 0.75rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 1rem;
-  font-weight: 600;
-  cursor: not-allowed;
-  opacity: 0.6;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-end;
 }
 
-.registration-page .contact-info {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #2c5530;
-}
-
-.registration-page .contact-info h2 {
-  color: #2c5530;
-  margin-bottom: 1rem;
-}
-
-.registration-page .contact-info p {
-  margin-bottom: 0.5rem;
-}
-
-.registration-page .contact-info p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-
-  .registration-page .registration-intro,
-  .registration-page .event-details,
-  .registration-page .form-placeholder,
-  .registration-page .contact-info {
-    padding: 1rem;
-  }
-
-  .registration-page .placeholder-form {
-    padding: 0;
-  }
-
-  .registration-page .form-field {
-    margin-bottom: 1rem;
-  }
+.submit-btn:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
 }

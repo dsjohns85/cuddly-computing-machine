@@ -10,9 +10,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, onPageChange }) =>
   const [menuOpen, setMenuOpen] = useState(false);
   const pages = [
     { key: 'home', label: 'Home' },
-    { key: 'about', label: 'About' },
-    { key: 'symposium', label: 'Symposium' },
-    { key: 'registration', label: 'Registration' },
+    { key: 'symposium', label: 'Leadership & Ethics Seminar' },
+    { key: 'about', label: 'About Us' },
     { key: 'resources', label: 'Resources' },
   ];
 
