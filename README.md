@@ -95,18 +95,35 @@ src/
 
 ### GitHub Pages (Automatic)
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch using GitHub Actions.
 
+**Setup Requirements:**
 1. **Enable GitHub Pages** in repository settings
-2. **Set source** to "GitHub Actions"
-3. **Push to main** branch to trigger deployment
+2. **Set source** to "GitHub Actions" 
+3. **Ensure Actions have permissions** to deploy
+
+**Deployment Process:**
+- Push changes to `main` branch
+- GitHub Actions workflow automatically builds and deploys
+- Site updates at: `https://dsjohns85.github.io/cuddly-computing-machine/`
+
+**Testing Deployment Locally:**
+```bash
+npm run build    # Build for production
+npm run preview  # Preview the production build
+```
 
 ### Manual Deployment
 
 ```bash
-npm run build
-# Upload dist/ folder to your hosting provider
+npm run deploy   # Build and show deployment instructions
+# Or manually: npm run build && upload dist/ folder to hosting provider
 ```
+
+**Production Build Details:**
+- Output directory: `dist/`
+- Base URL: `/cuddly-computing-machine/` (configured for GitHub Pages)
+- Optimized assets with chunking and compression
 
 ## Contributing
 
