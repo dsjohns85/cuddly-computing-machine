@@ -1,4 +1,6 @@
 import React from 'react';
+import EventCarousel from '../components/EventCarousel';
+import ContactForm from '../components/ContactForm';
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +21,9 @@ const Home: React.FC = () => {
         />
         <h6>Leaders of Character Initiative</h6>
       </header>
+
+      <EventCarousel />
+
       <section className="symposium-highlight" style={{ backgroundImage: 'url(/images/seminar-bg.jpg)' }}>
         <h2>Annual Leadership & Ethics Seminar</h2>
         <p>
@@ -27,6 +32,8 @@ const Home: React.FC = () => {
         </p>
         <button className="btn">Learn More</button>
       </section>
+
+      <ContactForm />
     </div>
   );
 };
