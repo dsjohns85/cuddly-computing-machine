@@ -1,21 +1,37 @@
-# West Point Society of Cincinnati - Website POC
+# West Point Society of Cincinnati - Website
 
-A modern, static website for the West Point Society of Cincinnati built with **Vite**, **React**, and **TypeScript**.
+A modern, fully-functional static website for the West Point Society of Cincinnati, replicating the design and functionality of [wpscincinnati.com](https://wpscincinnati.com). Built with **Vite**, **React**, and **TypeScript**.
 
-## Project Goals
+## 🎯 Project Status
 
-- Create a professional web presence for the West Point Society of Cincinnati
-- Provide information about events, symposiums, and member resources
-- Enable event registration and member engagement
-- Maintain a clean, accessible, and mobile-responsive design
-- Support easy content updates and expansion
+**COMPLETE** - All core features implemented and deployed to GitHub Pages!
+
+### ✅ Completed Features
+
+- ✅ Full homepage with hero section, event carousel, and contact form
+- ✅ Complete design replication of wpscincinnati.com (teal color scheme, Raleway font)
+- ✅ All pages implemented (Home, About, Symposium, Registration, Resources)
+- ✅ Responsive navigation with mobile hamburger menu
+- ✅ Event carousel with smooth transitions and navigation
+- ✅ Contact form with validation
+- ✅ Integrated images and YouTube video embed
+- ✅ GitHub Pages deployment with automated workflows
+- ✅ Mobile-responsive design
+- ✅ Dev container configuration for GitHub Codespaces
+
+## 🌐 Live Site
+
+**Visit:** [https://dsjohns85.github.io/cuddly-computing-machine/](https://dsjohns85.github.io/cuddly-computing-machine/)
 
 ## Features
 
-- **Multi-page Navigation**: Home, About, Symposium, Registration, Resources
-- **Responsive Design**: Mobile-first approach with clean, professional styling
+- **Multi-page Application**: Home, About, Symposium, Registration, Resources
+- **Event Carousel**: Showcases programs with image slides and smooth navigation
+- **Contact Form**: Full-featured form with client-side validation
+- **Responsive Design**: Mobile-first approach with hamburger menu navigation
+- **YouTube Integration**: Embedded video with autoplay
+- **Image Gallery**: Background images and event photos from wpscincinnati.com
 - **TypeScript**: Type-safe development for maintainability
-- **GitHub Pages Ready**: Automated deployment pipeline
 - **Modern Tooling**: Vite for fast development and optimized builds
 
 ## Project Structure
@@ -24,16 +40,17 @@ A modern, static website for the West Point Society of Cincinnati built with **V
 src/
 ├── components/          # Reusable UI components
 │   ├── layout/         # Navigation, Footer, Layout components
-│   └── common/         # Shared components (buttons, forms, etc.)
+│   ├── EventCarousel.tsx    # Event/program showcase carousel
+│   └── ContactForm.tsx      # Contact form component
 ├── pages/              # Main page components
-│   ├── Home.tsx        # Landing page
+│   ├── Home.tsx        # Landing page with hero, carousel, contact
 │   ├── About.tsx       # About the society
 │   ├── Symposium.tsx   # Annual symposium information
 │   ├── Registration.tsx # Event registration
-│   └── Resources.tsx   # Member resources
+│   └── Resources.tsx   # Member resources and downloads
 ├── styles/             # Global styles and themes
-├── assets/             # Images, icons, and static files
-└── App.tsx             # Main application component
+├── assets/             # Static assets
+└── App.tsx             # Main application component with routing
 ```
 
 ## Getting Started
@@ -47,7 +64,7 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/dsjohns85/cuddly-computing-machine.git
    cd cuddly-computing-machine
    ```
 
@@ -71,76 +88,44 @@ src/
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint for code quality
 
-## Development Guidelines
+### Using GitHub Codespaces
 
-### Adding New Pages
+This project includes a dev container configuration:
 
-1. Create a new component in `src/pages/`
-2. Add the route to the navigation in `src/components/layout/Navigation.tsx`
-3. Update the page router in `src/App.tsx`
-
-### Adding Components
-
-- **Layout components**: Place in `src/components/layout/`
-- **Reusable components**: Place in `src/components/common/`
-- **Page-specific components**: Create subfolder in `src/components/`
-
-### Styling
-
-- Component-specific styles: Create `.css` files alongside components
-- Global styles: Add to `src/styles/`
-- Follow BEM naming convention for CSS classes
+1. Click "Code" → "Codespaces" → "Create codespace on main"
+2. Dependencies install automatically
+3. Port 5173 forwards automatically
+4. ESLint auto-fixes on save
 
 ## Deployment
 
-### GitHub Pages (Automatic)
+### Automatic Deployment (GitHub Pages)
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch using GitHub Actions.
+The site **automatically deploys** when changes are pushed to the `main` branch.
 
-**Setup Requirements:**
-1. **Enable GitHub Pages** in repository settings
-2. **Set source** to "GitHub Actions" 
-3. **Ensure Actions have permissions** to deploy
+**Live URL:** `https://dsjohns85.github.io/cuddly-computing-machine/`
 
-**Deployment Process:**
-- Push changes to `main` branch
-- GitHub Actions workflow automatically builds and deploys
-- Site updates at: `https://dsjohns85.github.io/cuddly-computing-machine/`
+**How it works:**
+- GitHub Actions workflow runs on every push to `main`
+- Builds production bundle with Vite
+- Deploys to GitHub Pages automatically
+- Updates live site within 1-2 minutes
 
-**Testing Deployment Locally:**
+**Manual Deployment Testing:**
 ```bash
 npm run build    # Build for production
 npm run preview  # Preview the production build
 ```
 
-### Manual Deployment
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
 
-```bash
-npm run deploy   # Build and show deployment instructions
-# Or manually: npm run build && upload dist/ folder to hosting provider
-```
+## Design & Styling
 
-**Production Build Details:**
-- Output directory: `dist/`
-- Base URL: `/cuddly-computing-machine/` (configured for GitHub Pages)
-- Optimized assets with chunking and compression
-
-## Contributing
-
-1. **Create feature branch** from `main`
-2. **Make changes** with descriptive commit messages
-3. **Test locally** using `npm run dev`
-4. **Submit pull request** for review
-
-## Future Enhancements
-
-- [ ] Contact forms and member directory
-- [ ] Event calendar integration
-- [ ] Photo galleries for past events
-- [ ] Member login and dashboard
-- [ ] Content Management System (CMS) integration
-- [ ] SEO optimization and meta tags
-- [ ] Analytics integration
+- **Color Scheme**: Teal/Turquoise (#B6F3E8, #00B8D4) matching wpscincinnati.com
+- **Typography**: Raleway font family from Google Fonts
+- **Responsive Breakpoints**: 768px (tablet), 480px (mobile), 375px (small mobile)
+- **Layout**: CSS with BEM-style naming conventions
+- **Images**: Background images with overlay effects for text readability
 
 ## Technology Stack
 
@@ -148,7 +133,39 @@ npm run deploy   # Build and show deployment instructions
 - **Build Tool**: Vite 5
 - **Styling**: CSS Modules with responsive design
 - **Deployment**: GitHub Pages with GitHub Actions
-- **Development**: ESLint, Prettier for code quality
+- **Development**: ESLint for code quality, Dev Containers for Codespaces
+- **Font**: Google Fonts (Raleway)
+
+## Recent Updates (October 2025)
+
+- ✅ Updated YouTube video embed with autoplay
+- ✅ Fixed image paths for Vite base URL compatibility
+- ✅ Added event carousel with 3 program slides
+- ✅ Implemented contact form with validation
+- ✅ Integrated actual images from wpscincinnati.com
+- ✅ Complete design replication (colors, fonts, layout)
+- ✅ Fixed responsive navigation z-index issues
+- ✅ Optimized dev container configuration
+- ✅ Implemented all pages (Resources, Registration, Symposium, About)
+
+## Future Enhancements
+
+- [ ] Backend integration for contact form submissions
+- [ ] Google Form integration for registration
+- [ ] Event calendar with date management
+- [ ] Photo galleries for past events
+- [ ] Member login and dashboard
+- [ ] CMS integration for easier content updates
+- [ ] SEO optimization and meta tags
+- [ ] Analytics integration
+
+## Contributing
+
+1. **Create feature branch** from `main`
+2. **Make changes** with descriptive commit messages
+3. **Test locally** using `npm run dev`
+4. **Build and preview** with `npm run build && npm run preview`
+5. **Submit pull request** for review
 
 ## Support
 
@@ -157,3 +174,5 @@ For questions or support, please contact the West Point Society of Cincinnati le
 ---
 
 *Built with ❤️ for the West Point community in Cincinnati*
+
+**Repository**: [github.com/dsjohns85/cuddly-computing-machine](https://github.com/dsjohns85/cuddly-computing-machine)
