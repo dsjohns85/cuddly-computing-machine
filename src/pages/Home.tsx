@@ -3,25 +3,23 @@ import React from 'react';
 const Home: React.FC = () => {
   return (
     <div className="home-page">
-      <header className="hero">
+      <header className="hero" style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}>
         <h1>West Point Society of Greater Cincinnati</h1>
         <h6>Presents</h6>
-        <div className="logo" style={{
-          width: '150px',
-          height: '150px',
-          background: 'rgba(182, 243, 232, 0.2)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '3rem',
-          margin: '2rem 0'
-        }}>
-          USMA
-        </div>
+        <img
+          src="/images/wp-logo.png"
+          alt="West Point Logo"
+          className="logo"
+          style={{
+            width: '150px',
+            height: '150px',
+            margin: '2rem 0',
+            filter: 'brightness(1.2)'
+          }}
+        />
         <h6>Leaders of Character Initiative</h6>
       </header>
-      <section className="symposium-highlight">
+      <section className="symposium-highlight" style={{ backgroundImage: 'url(/images/seminar-bg.jpg)' }}>
         <h2>Annual Leadership & Ethics Seminar</h2>
         <p>
           Join us for our signature event, where distinguished speakers and community leaders share insights on leadership, ethics, and service.

@@ -84,6 +84,24 @@
   text-align: center;
 }
 
+.home-page .symposium-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 250, 235, 0.9);
+  z-index: 1;
+}
+
+.home-page .symposium-highlight h2,
+.home-page .symposium-highlight p,
+.home-page .symposium-highlight .btn {
+  position: relative;
+  z-index: 2;
+}
+
 .home-page .symposium-highlight h2 {
   color: var(--color-text-dark);
   font-size: 2.5rem;
@@ -125,29 +143,29 @@
     padding: 2.2rem 0.5rem;
     min-height: 220px;
   }
-  
+
   .home-page .hero h1 {
     font-size: 1.5rem;
   }
-  
+
   .home-page .hero h6 {
     font-size: 0.9rem;
   }
-  
+
   .home-page .hero .logo {
     width: 100px;
     height: 100px;
     margin: 1rem 0;
   }
-  
+
   .home-page .hero .intro {
     font-size: 0.98rem;
   }
-  
+
   .home-page .symposium-highlight {
     padding: 1.2rem 0.5rem;
   }
-  
+
   .home-page .symposium-highlight h2 {
     font-size: 1.2rem;
   }
@@ -158,28 +176,28 @@
     padding: 1.2rem 0.2rem;
     min-height: 140px;
   }
-  
+
   .home-page .hero h1 {
     font-size: 1.1rem;
   }
-  
+
   .home-page .hero h6 {
     font-size: 0.75rem;
   }
-  
+
   .home-page .hero .logo {
     width: 80px;
     height: 80px;
   }
-  
+
   .home-page .hero .intro {
     font-size: 0.92rem;
   }
-  
+
   .home-page .symposium-highlight {
     padding: 0.7rem 0.2rem;
   }
-  
+
   .home-page .symposium-highlight h2 {
     font-size: 1rem;
   }
@@ -190,11 +208,11 @@
     padding: 0.7rem 0.1rem;
     min-height: 90px;
   }
-  
+
   .home-page .hero h1 {
     font-size: 0.9rem;
   }
-  
+
   .home-page .hero .intro {
     font-size: 0.85rem;
   }
@@ -288,12 +306,12 @@
   .resources-page {
     padding: 1rem 0.5rem;
   }
-  
+
   .resource-item {
     padding: 0.7rem;
     font-size: 0.98rem;
   }
-  
+
   .resource-type {
     margin-left: 0.5rem;
     font-size: 0.92rem;
