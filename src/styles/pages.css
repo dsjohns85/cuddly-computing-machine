@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 2;
   /* Add your background image like this:
   background-image: url('/path/to/hero-image.jpg');
   */
@@ -100,24 +101,62 @@
 
 @media (max-width: 768px) {
   .home-page .hero {
-    padding: 3rem 1rem;
-    min-height: 300px;
+    padding: 2.2rem 0.5rem;
+    min-height: 220px;
   }
-  
+
   .home-page .hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  
+
   .home-page .hero .intro {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
-  
+
   .home-page .symposium-highlight {
-    padding: 2rem 1rem;
+    padding: 1.2rem 0.5rem;
   }
-  
+
   .home-page .symposium-highlight h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    .home-page .hero {
+      padding: 1.2rem 0.2rem;
+      min-height: 140px;
+    }
+
+    .home-page .hero h1 {
+      font-size: 1.1rem;
+    }
+
+    .home-page .hero .intro {
+      font-size: 0.92rem;
+    }
+
+    .home-page .symposium-highlight {
+      padding: 0.7rem 0.2rem;
+    }
+
+    .home-page .symposium-highlight h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .home-page .hero {
+      padding: 0.7rem 0.1rem;
+      min-height: 90px;
+    }
+
+    .home-page .hero h1 {
+      font-size: 0.9rem;
+    }
+
+    .home-page .hero .intro {
+      font-size: 0.85rem;
+    }
   }
 }
 
@@ -203,10 +242,12 @@
   .resources-page {
     padding: 1rem 0.5rem;
   }
+
   .resource-item {
     padding: 0.7rem;
     font-size: 0.98rem;
   }
+
   .resource-type {
     margin-left: 0.5rem;
     font-size: 0.92rem;
@@ -384,17 +425,18 @@
 }
 
 @media (max-width: 768px) {
+
   .registration-page .registration-intro,
   .registration-page .event-details,
   .registration-page .form-placeholder,
   .registration-page .contact-info {
     padding: 1rem;
   }
-  
+
   .registration-page .placeholder-form {
     padding: 0;
   }
-  
+
   .registration-page .form-field {
     margin-bottom: 1rem;
   }
