@@ -22,6 +22,21 @@ const Home: React.FC = () => {
         <h6>Leaders of Character Initiative</h6>
       </header>
 
+      <section className="video-section">
+        <div className="video-container">
+          <h2>Leadership in Action</h2>
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/NQpfeNXuy1E?autoplay=1&mute=1&loop=1&playlist=NQpfeNXuy1E&rel=0"
+              title="West Point Society of Cincinnati"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       <EventCarousel />
 
       <section className="symposium-highlight" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/seminar-bg.jpg)` }}>

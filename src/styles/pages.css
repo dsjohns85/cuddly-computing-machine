@@ -402,3 +402,69 @@
   color: var(--color-text-light);
   transform: translateY(-2px);
 }
+
+/* Video Section Styles */
+.video-section {
+  background-color: var(--color-background-dark);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-section h2 {
+  color: var(--color-text-light);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding: 2rem 1rem;
+  }
+
+  .video-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .video-wrapper {
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .video-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
