@@ -132,6 +132,21 @@
   padding-bottom: 0.5rem;
 }
 
+.about-page h2,
+.symposium-page h2 {
+  color: #1a3320;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-page ul,
+.symposium-page ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
 .about-page p,
 .symposium-page p,
 .registration-page p,
