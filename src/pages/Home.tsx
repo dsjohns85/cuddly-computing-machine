@@ -5,11 +5,11 @@ import ContactForm from '../components/ContactForm';
 const Home: React.FC = () => {
   return (
     <div className="home-page">
-      <header className="hero" style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}>
+      <header className="hero" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-background.jpg)` }}>
         <h1>West Point Society of Greater Cincinnati</h1>
         <h6>Presents</h6>
         <img
-          src="/images/wp-logo.png"
+          src={`${import.meta.env.BASE_URL}images/wp-logo.png`}
           alt="West Point Logo"
           className="logo"
           style={{
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
       <EventCarousel />
 
-      <section className="symposium-highlight" style={{ backgroundImage: 'url(/images/seminar-bg.jpg)' }}>
+      <section className="symposium-highlight" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/seminar-bg.jpg)` }}>
         <h2>Annual Leadership & Ethics Seminar</h2>
         <p>
           Join us for our signature event, where distinguished speakers and community leaders share insights on leadership, ethics, and service.

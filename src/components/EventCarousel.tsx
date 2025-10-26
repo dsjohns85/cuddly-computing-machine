@@ -15,19 +15,19 @@ const EventCarousel: React.FC = () => {
         {
             title: 'Annual Leadership & Ethics Seminar',
             description: 'Join distinguished speakers and community leaders as they share insights on leadership, ethics, and service. This signature event brings together West Point graduates, ROTC cadets, and community members.',
-            image: '/images/audience.jpg',
+            image: `${import.meta.env.BASE_URL}images/audience.jpg`,
             buttonText: 'Learn More'
         },
         {
             title: 'Student Leadership Development',
             description: 'Supporting the development of future leaders through mentorship, scholarships, and educational programs focused on character and leadership excellence.',
-            image: '/images/event-photo.jpg',
+            image: `${import.meta.env.BASE_URL}images/event-photo.jpg`,
             buttonText: 'Get Involved'
         },
         {
             title: 'Community Engagement',
             description: 'Connecting West Point graduates and supporters in the Greater Cincinnati area, fostering leadership, camaraderie, and service to our community.',
-            image: '/images/seminar-bg.jpg',
+            image: `${import.meta.env.BASE_URL}images/seminar-bg.jpg`,
             buttonText: 'Join Us'
         }
     ];
